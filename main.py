@@ -3,6 +3,8 @@ import random
 #import verity!
 global knife
 knife = True
+global rev
+rev = False
 # (en gångs saker)
 #-----------------------------------------------------
 def titta_start():
@@ -32,11 +34,13 @@ def spelare():
 
     elif age > 130:
         input("du fick en hjärt attack!")
+        spelare()
         
 
     elif age == str:
         print("välg en riktig ålder")
         spelare()
+
 
     else:
         början()
@@ -93,7 +97,21 @@ def värld():
 
 
 
-    print("slut")
+    za_worldo = input("vart vill du gå? (casino), (saloon), (general store), (jobb), något annat ")
+    if za_worldo == "saloon":
+        saloon()
+
+    elif za_worldo == "casino":
+        print(wip)
+
+    elif za_worldo == "general store":
+        print(wip)
+
+    elif za_worldo == "jobb":
+        print(wip)
+    else:
+        input("du skrev något fell")
+        värld()
 #-----------------------------------------------------
 #-----------------------------------------------------
 def inventory():
@@ -116,8 +134,6 @@ def fråga():
         
         elif information2 ==  "rygsäck":
             inventory()
-        elif information2 ==  "tst":
-            stats()
         else:
             input("du skrev något fel")
             fråga()
@@ -131,26 +147,40 @@ def fråga():
 
     elif information ==  "rygsäck":
         inventory()
-    elif information2 ==  "tst":
-        stats()
     else:
         print("du skrev något fel")
         fråga()
-    
 #-----------------------------------------------------
 #-----------------------------------------------------
 def stats():
-    print("<(*)>-------------------------------------<(*)>")
-    print("namn = ", (name), "ålder = ", (age))
-    print("du har", (guld), "pengar")
+    print("<(*)>---------------------------<(*)>")
+    print("    namn: ",(name),    "ålder: ",(age))
+    print("    du har", (guld), "pengar")
+    hp = 30
+    if hp > 30:
+        hp = 30
+        
+    print("    du har", (hp), "liv")
+    
+    
     if rev == True:
-        print ("du har en revolver med", (bul))
+        print("    du har en revolver med", (bul))
+    else:
+        print("    din fika är tom")
+    
     if knife == True:
-        print ("du har en kniv")
+        print("    du har en kniv")
+    else:
+        print("    din fika är tom")
+    print("<(*)>---------------------------<(*)>")
 #-----------------------------------------------------
 
-
-
+#dom olika stälerna man kan gå till
+#-----------------------------------------------------
+def saloon():
+    stats()
+    val = input("vad vill du gjöra (slås med en full person) (sköpa en drika) ()")
+#-----------------------------------------------------
 
 
 

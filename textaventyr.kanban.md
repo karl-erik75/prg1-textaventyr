@@ -10,15 +10,6 @@
 <!-- id: task-1789371029039-86 -->
 <!-- priority: critical -->
 
-#### världen
-<!-- id: task-1790065515868-200 -->
-gjör klart så att du kan gå runt i the world!
-- [ ] nej
-Tags: `ehh`
-<!-- priority: critical -->
-<!-- workload: extreme -->
-<!-- source: jag -->
-
 #### .lower()
 <!-- id: task-1789370324820-21 -->
 all jämförelse av inmatning sänks till gemener först
@@ -37,11 +28,20 @@ vid normala inmatningar. Om du vill så kan du använda mönstret valideraren fr
 
 ## In Progress
 
-#### "stats windo"
-<!-- id: task-1790068279498-495 -->
-gjör så man kan kola vad man har liv, guld osv...
-<!-- priority: high -->
-<!-- workload: hard -->
+#### världen
+<!-- id: task-1790065515868-200 -->
+gjör klart så att du kan gå runt i the world!
+- [ ] nej
+Tags: `ehh`
+<!-- priority: critical -->
+<!-- workload: extreme -->
+<!-- source: jag -->
+
+#### saloon/bar
+<!-- id: task-1790240662232-664 -->
+gjör klart så att man kan sköpa drikor och skjuta folk!!!!
+<!-- priority: low -->
+<!-- workload: extreme -->
 
 ## Done
 
@@ -52,6 +52,12 @@ Klona / forka repot och börja sedan jobba med materialet
 #### f-strängar
 <!-- id: task-1789370290018-5 -->
 spelarens namn används i minst tre print()-satser
+
+#### "stats windo"
+<!-- id: task-1790068279498-495 -->
+gjör så man kan kola vad man har liv, guld osv...
+<!-- priority: high -->
+<!-- workload: hard -->
 
 #### Spelarnamn
 <!-- id: task-1789370256358-0 -->
