@@ -101,8 +101,8 @@ def inventory():
     print ("du har", (guld),"pengar")
     if rev == True:
         print("du har en revolver med", (bul),"skot")
-    else:
-        fråga
+    
+    fråga()
 #-----------------------------------------------------
 #-----------------------------------------------------
 def fråga():
@@ -116,6 +116,8 @@ def fråga():
         
         elif information2 ==  "rygsäck":
             inventory()
+        elif information2 ==  "tst":
+            stats()
         else:
             input("du skrev något fel")
             fråga()
@@ -129,9 +131,12 @@ def fråga():
 
     elif information ==  "rygsäck":
         inventory()
+    elif information2 ==  "tst":
+        stats()
     else:
         print("du skrev något fel")
         fråga()
+    
 #-----------------------------------------------------
 #-----------------------------------------------------
 def stats():

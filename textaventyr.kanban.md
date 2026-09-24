@@ -37,10 +37,6 @@ vid normala inmatningar. Om du vill så kan du använda mönstret valideraren fr
 
 ## In Progress
 
-#### f-strängar
-<!-- id: task-1789370290018-5 -->
-spelarens namn används i minst tre print()-satser
-
 #### "stats windo"
 <!-- id: task-1790068279498-495 -->
 gjör så man kan kola vad man har liv, guld osv...
@@ -52,6 +48,10 @@ gjör så man kan kola vad man har liv, guld osv...
 #### Klona repot
 <!-- id: task-1789371224632-115 -->
 Klona / forka repot och börja sedan jobba med materialet
+
+#### f-strängar
+<!-- id: task-1789370290018-5 -->
+spelarens namn används i minst tre print()-satser
 
 #### Spelarnamn
 <!-- id: task-1789370256358-0 -->
