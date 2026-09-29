@@ -43,6 +43,11 @@ gjör klart så att man kan sköpa drikor och skjuta folk!!!!
 <!-- priority: low -->
 <!-- workload: extreme -->
 
+#### alla ska prata olike språk för tusan!
+<!-- id: task-1790673934586-755 -->
+<!-- priority: low -->
+<!-- workload: easy -->
+
 ## Done
 
 #### Klona repot

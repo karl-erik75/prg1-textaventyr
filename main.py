@@ -6,6 +6,7 @@ knife = True
 global rev
 rev = False
 # (en gångs saker)
+print("\033c", end="")
 #-----------------------------------------------------
 def titta_start():
     print("\033c", end="")
@@ -178,8 +179,51 @@ def stats():
 #dom olika stälerna man kan gå till
 #-----------------------------------------------------
 def saloon():
+    print("\033c", end="")
     stats()
-    val = input("vad vill du gjöra (slås med en full person) (sköpa en drika) ()")
+    val = input("vad vill du gjöra (sköpa en drika) (prata med folk) (spela med pengar). skriv (annat) om du vil bort! ")
+
+    #första faleet om du välgjer drika
+    #----------------------------------------------------- 
+    if val == "sköp en drika" or val == "drika":
+        
+        drika = input("vilken drika vil du sköpa? (hård wisky), (wisky), (vin). (mjölk) ")
+        if drika == "HÅRD WISKY!!!":
+            print("DU DÖRRRRRR")
+
+        elif drika == "wisky":
+            print("du dör mindre")
+
+        elif drika == "vin":
+            print ("de blev en björ och du DÖR")
+        elif drika == "mjölk":
+            print ("MUMS!!!")
+        else:
+            input("du skrev något fel")
+            saloon()
+    #quests/om du vil prata med folk
+    #-----------------------------------------------------
+    elif val == "prata" or val == "prata med folk":
+        personer = random.randint(1,6)
+
+        if personer == 5:
+            print("Psst! Jam 17 vjeç dhe nuk mund të blej armë zjarri... a mund të ma blesh ti një? Mund të të paguaj shumë mirë. ") #sköp ett stort vapen åt han
+        elif personer == 4:
+            print("Whisky nukillaangasoq isumaqarpunga. Nassaarisinnaagukku nukittunerusumik tunisinnaaviuk? ") #hita hördare wisky
+        elif personer == 3:
+            print("Иктаж-могай руш дене тӱкнен улыда? Нуно Олимпиадым бомбитлаш шонат. КАЖНЕ РУШЫМ ПУШТЫЗА!") # döda en rysk!
+        elif personer == 2:
+            print("茶色い狼を見なかったか？俺の足の親指を食いちぎりやがったんだ！そいつの首を持ってきてくれれば、200払ってやるぞ！") #brun varg ska dödas!
+        elif personer == 1:
+            print("Hei, jeg er kanskje litt for ung til å kjøpe whisky. Du ser ut som en snill, eldre mann – kunne du kjøpt en til meg? Jeg har pengene...") #SKöp wiskin
+        elif personer == 6:
+            print("jamen tjena brosan! mit namn är Ulf. Ulf Ulfsson amen kalla mig bara ulf då. Du du ser ut som en god medborgare skule du kuna ge mig lite fika?")
+
+
+
+
+
+
 #-----------------------------------------------------
 
 
