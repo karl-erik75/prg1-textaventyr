@@ -209,21 +209,179 @@ def saloon():
             print("du har inte så ,ycket pengar!")
             saloon()
         elif gm < guld or gm == guld:
-            start = random.randint (1,13)
-        if start == 1:
-            start = poängdam
+            gmstart = random.randint (1,13)
+            gmstart2 = random.randint (1,13)
+            if gmstart == 1:
+                gmstart = 10
 
-        if start == 2:
+            elif gmstart == 2:
+                gmstart = 10
 
-        if start == 3:
+            elif gmstart == 3:
+                gmstart = 10
 
-        if start == 4:
+            elif gmstart == 4:
+                gmstart = 10
 
-        if start == 5:
+            elif gmstart == 5:
+                gmstart = 11
 
-        elif start == 6:
+            elif gmstart == 6:
+                gmstart = 2
 
-        elif start == 1:
+            elif gmstart == 7:
+                gmstart = 3
+
+            elif gmstart == 8:
+                gmstart = 4
+
+            elif gmstart == 9:
+                gmstart = 5
+
+            elif gmstart == 10:
+                gmstart = 6
+
+            elif gmstart == 11:
+                gmstart = 7
+
+            elif gmstart == 12:
+                gmstart = 8
+
+            elif gmstart == 13:
+                gmstart = 9
+
+
+            if gmstart2 == 1:
+                gmstart2 = 10
+
+            elif gmstart2 == 2:
+                gmstart2 = 10
+
+            elif gmstart2 == 3:
+                gmstart2 = 10
+
+            elif gmstart2 == 4:
+                gmstart2 = 10
+
+            elif gmstart2 == 5:
+                gmstart2 = 11
+
+            elif gmstart2 == 6:
+                gmstart2 = 2
+
+            elif gmstart2 == 7:
+                gmstart2 = 3
+
+            elif gmstart2 == 8:
+                gmstart2 = 4
+
+            elif gmstart2 == 9:
+                gmstart2 = 5
+
+            elif gmstart2 == 10:
+                gmstart2 = 6
+
+            elif gmstart2 == 11:
+                gmstart2 = 7
+
+            elif gmstart2 == 12:
+                gmstart2 = 8
+
+            elif gmstart2 == 13:
+                gmstart2 = 9
+
+            starting_points = gmstart2 + gmstart
+            if starting_points > 21:
+                starting_points = 21
+            print ("du har", (starting_points))
+            gmstart = random.randint (1,13)
+            gmstart2 = random.randint (1,13)
+            if gmstart == 1:
+                gmstart = 10
+
+            elif gmstart == 2:
+                gmstart = 10
+
+            elif gmstart == 3:
+                gmstart = 10
+
+            elif gmstart == 4:
+                gmstart = 10
+
+            elif gmstart == 5:
+                gmstart = 11
+
+            elif gmstart == 6:
+                gmstart = 2
+
+            elif gmstart == 7:
+                gmstart = 3
+
+            elif gmstart == 8:
+                gmstart = 4
+
+            elif gmstart == 9:
+                gmstart = 5
+
+            elif gmstart == 10:
+                gmstart = 6
+
+            elif gmstart == 11:
+                gmstart = 7
+
+            elif gmstart == 12:
+                gmstart = 8
+
+            elif gmstart == 13:
+                gmstart = 9
+
+
+            if gmstart2 == 1:
+                gmstart2 = 10
+
+            elif gmstart2 == 2:
+                gmstart2 = 10
+
+            elif gmstart2 == 3:
+                gmstart2 = 10
+
+            elif gmstart2 == 4:
+                gmstart2 = 10
+
+            elif gmstart2 == 5:
+                gmstart2 = 11
+
+            elif gmstart2 == 6:
+                gmstart2 = 2
+
+            elif gmstart2 == 7:
+                gmstart2 = 3
+
+            elif gmstart2 == 8:
+                gmstart2 = 4
+
+            elif gmstart2 == 9:
+                gmstart2 = 5
+
+            elif gmstart2 == 10:
+                gmstart2 = 6
+
+            elif gmstart2 == 11:
+                gmstart2 = 7
+
+            elif gmstart2 == 12:
+                gmstart2 = 8
+
+            elif gmstart2 == 13:
+                gmstart2 = 9
+            Fstarting_points = gmstart2 + gmstart
+            if Fstarting_points > 21:
+                Fstarting_points = 21
+            print ("din fiende har", (Fstarting_points))
+            
+                
+
+            
 
         
 
