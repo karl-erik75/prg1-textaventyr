@@ -18,15 +18,15 @@ all jämförelse av inmatning sänks till gemener först
 <!-- id: task-1789370357795-38 -->
 minst två, och de ska vara olika. Slutar alla vägar likadant har spelarens val inte spelat någon roll
 
-#### Inga kraschar
-<!-- id: task-1789370399886-49 -->
-vid normala inmatningar. Om du vill så kan du använda mönstret valideraren från kurswebben
-
 #### gjör så man kan slås med folk
 <!-- id: task-1790066427123-296 -->
 <!-- priority: low -->
 
 ## In Progress
+
+#### Inga kraschar
+<!-- id: task-1789370399886-49 -->
+vid normala inmatningar. Om du vill så kan du använda mönstret valideraren från kurswebben
 
 #### världen
 <!-- id: task-1790065515868-200 -->
@@ -43,10 +43,9 @@ gjör klart så att man kan sköpa drikor och skjuta folk!!!!
 <!-- priority: low -->
 <!-- workload: extreme -->
 
-#### alla ska prata olike språk för tusan!
-<!-- id: task-1790673934586-755 -->
-<!-- priority: low -->
-<!-- workload: easy -->
+#### spela med pengar i the saloon
+<!-- id: task-1790847008416-144 -->
+<!-- priority: critical -->
 
 ## Done
 
@@ -63,6 +62,11 @@ spelarens namn används i minst tre print()-satser
 gjör så man kan kola vad man har liv, guld osv...
 <!-- priority: high -->
 <!-- workload: hard -->
+
+#### alla ska prata olike språk för tusan!
+<!-- id: task-1790673934586-755 -->
+<!-- priority: low -->
+<!-- workload: easy -->
 
 #### Spelarnamn
 <!-- id: task-1789370256358-0 -->
