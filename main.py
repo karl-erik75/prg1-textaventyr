@@ -212,31 +212,31 @@ def saloon():
         mon = random.randint (2,5)
         vinsten = 500    
         vinst_pengar = vinsten * mon
-        input("priset är" (vinst_pengar))
-        val2 = input("är du säker att du vil spela?")
-        if val2 == "nej":
-            fråga()
-        if val2 == "ja":
+        print("priset är", vinst_pengar)
+        val23 = input("är du säker att du vil spela? ")
+        if val23 == "nej":
+            input("du valde att gå till baka")
+            saloon()
+        elif val23 == "ja":
             skot = 0
             spelet = False
             print("\033c", end="")
             input("В пистолете один патрон; в каждом раунде вы либо стреляете в себя, либо прокручиваете барабан и затем стреляете в себя.")
-            input("has sa reglerna")
+            input("han sa något oviktigt om reglerna")
             input("han läger ett skot i pistolen och snurar på cylinder sedan ger han dig pistolen")
             cylinder = random.randint(1,6)
             spelet = True
-            honor = honor - 1
             while spelet == True:
                 print("\033c", end="")
-                val3 = input("vad gjör du (skjuta eller snura")
+                val3 = input("vad gjör du (skjuta eller snura) ")
                 if val3 == "skjuta":
                     skot + 1
                     if cylinder == skot:
                         print("\033c", end="")
-                        input("wasted! du dog avv at skjuta dig skälv :(")
+                        input("wasted! du dog av at skjuta dig skälv :(")
                         spelet = False
                         DEATH()
-                    else:
+                    elif cylinder != skot:
                         input("du hörde ett click sedan gede du revolvern åt han")
                         if skot == 5:
                             print("han valde att snura cylinder")
@@ -248,6 +248,15 @@ def saloon():
                                 vinst()
                             else:
                                 input("ni hörde ett click och fortsete sköra")
+                        else:
+                            input("han valde att skjuta sig skälv")
+                            skot + 1
+                            if skot == cylinder:
+                                spelet = False
+                                vinst()
+                            else:
+                                input("ni hörde ett click och forsäte att spela")
+                        
                         
                 elif val3 == "snura":
                     input("du valde att snura cylindern")
@@ -257,7 +266,7 @@ def saloon():
                     skot + 1
                     if skot == cylinder:
                         DEATH()
-                    else:
+                    elif skot != cylinder:
                         input("du hörde ett click sedan gede du revolvern åt han")
                         if skot == 5:
                             print("han valde att snura cylinder")
@@ -280,15 +289,6 @@ def saloon():
                                 input("ni hörde ett click och forsäte att spela")
 
 
-
-                
-
-
-
-
-
-
-        
         else:
             print("du skrev något fel")
             saloon()
