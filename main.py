@@ -5,6 +5,8 @@ global knife
 knife = True
 global rev
 rev = False
+global honor 
+honor = 0
 # (en gångs saker)
 print("\033c", end="")
 #-----------------------------------------------------
@@ -163,7 +165,6 @@ def stats():
         
     print("    du har", (hp), "liv")
     
-    
     if rev == True:
         print("    du har en revolver med", (bul))
     else:
@@ -183,7 +184,7 @@ def saloon():
     stats()
     val = input("vad vill du gjöra (sköpa en drika) (prata med folk) (spela med pengar). skriv (annat) om du vil bort! ")
 
-    #första faleet om du välgjer drika
+    #första valet om du välgjer drika
     #----------------------------------------------------- 
     if val == "sköp en drika" or val == "drika":
         
@@ -202,202 +203,104 @@ def saloon():
             input("du skrev något fel")
             saloon()
     #-----------------------------------------------------
+
+    #om du spelar med moneyyyy
+    #-----------------------------------------------------
     elif val == "spela med pengar" or val == "spela":
-        input("du välger att spela black jack")
-        gm = int(input(" du har", (guld), "hur mycket pengar läger du in? "))
-        if gm > guld:
-            print("du har inte så ,ycket pengar!")
+        print("\033c", end="")
+        input("rusian rulet")
+        mon = random.randint (2,5)
+        vinsten = 500    
+        vinst_pengar = vinsten * mon
+        input("priset är" (vinst_pengar))
+        val2 = input("är du säker att du vil spela?")
+        if val2 == "nej":
+            fråga()
+        if val2 == "ja":
+            skot = 0
+            spelet = False
+            print("\033c", end="")
+            input("В пистолете один патрон; в каждом раунде вы либо стреляете в себя, либо прокручиваете барабан и затем стреляете в себя.")
+            input("has sa reglerna")
+            input("han läger ett skot i pistolen och snurar på cylinder sedan ger han dig pistolen")
+            cylinder = random.randint(1,6)
+            spelet = True
+            honor = honor - 1
+            while spelet == True:
+                print("\033c", end="")
+                val3 = input("vad gjör du (skjuta eller snura")
+                if val3 == "skjuta":
+                    skot + 1
+                    if cylinder == skot:
+                        print("\033c", end="")
+                        input("wasted! du dog avv at skjuta dig skälv :(")
+                        spelet = False
+                        DEATH()
+                    else:
+                        input("du hörde ett click sedan gede du revolvern åt han")
+                        if skot == 5:
+                            print("han valde att snura cylinder")
+                            cylinder = random.randint(1,6)
+                            skot = 0
+                            skot + 1
+                            if skot == cylinder:
+                                spelet = False
+                                vinst()
+                            else:
+                                input("ni hörde ett click och fortsete sköra")
+                        
+                elif val3 == "snura":
+                    input("du valde att snura cylindern")
+                    cylinder = random.randint(1,6)
+                    skot = 0
+                    input("du rikta pistolen mt digskälv")
+                    skot + 1
+                    if skot == cylinder:
+                        DEATH()
+                    else:
+                        input("du hörde ett click sedan gede du revolvern åt han")
+                        if skot == 5:
+                            print("han valde att snura cylinder")
+                            cylinder = random.randint(1,6)
+                            skot = 0
+                            skot + 1
+                            if skot == cylinder:
+                                spelet = False
+                                vinst()
+                            else:
+                                input("ni hörde ett click och fortsete sköra")
+
+                        else:
+                            input("han valde att skjuta sig skälv")
+                            skot + 1
+                            if skot == cylinder:
+                                spelet = False
+                                vinst()
+                            else:
+                                input("ni hörde ett click och forsäte att spela")
+
+
+
+                
+
+
+
+
+
+
+        
+        else:
+            print("du skrev något fel")
             saloon()
-        elif gm < guld or gm == guld:
-            gmstart = random.randint (1,13)
-            gmstart2 = random.randint (1,13)
-            if gmstart == 1:
-                gmstart = 10
-
-            elif gmstart == 2:
-                gmstart = 10
-
-            elif gmstart == 3:
-                gmstart = 10
-
-            elif gmstart == 4:
-                gmstart = 10
-
-            elif gmstart == 5:
-                gmstart = 11
-
-            elif gmstart == 6:
-                gmstart = 2
-
-            elif gmstart == 7:
-                gmstart = 3
-
-            elif gmstart == 8:
-                gmstart = 4
-
-            elif gmstart == 9:
-                gmstart = 5
-
-            elif gmstart == 10:
-                gmstart = 6
-
-            elif gmstart == 11:
-                gmstart = 7
-
-            elif gmstart == 12:
-                gmstart = 8
-
-            elif gmstart == 13:
-                gmstart = 9
 
 
-            if gmstart2 == 1:
-                gmstart2 = 10
-
-            elif gmstart2 == 2:
-                gmstart2 = 10
-
-            elif gmstart2 == 3:
-                gmstart2 = 10
-
-            elif gmstart2 == 4:
-                gmstart2 = 10
-
-            elif gmstart2 == 5:
-                gmstart2 = 11
-
-            elif gmstart2 == 6:
-                gmstart2 = 2
-
-            elif gmstart2 == 7:
-                gmstart2 = 3
-
-            elif gmstart2 == 8:
-                gmstart2 = 4
-
-            elif gmstart2 == 9:
-                gmstart2 = 5
-
-            elif gmstart2 == 10:
-                gmstart2 = 6
-
-            elif gmstart2 == 11:
-                gmstart2 = 7
-
-            elif gmstart2 == 12:
-                gmstart2 = 8
-
-            elif gmstart2 == 13:
-                gmstart2 = 9
-
-            starting_points = gmstart2 + gmstart
-            if starting_points > 21:
-                starting_points = 21
-            print ("du har", (starting_points))
-            gmstart = random.randint (1,13)
-            gmstart2 = random.randint (1,13)
-            if gmstart == 1:
-                gmstart = 10
-
-            elif gmstart == 2:
-                gmstart = 10
-
-            elif gmstart == 3:
-                gmstart = 10
-
-            elif gmstart == 4:
-                gmstart = 10
-
-            elif gmstart == 5:
-                gmstart = 11
-
-            elif gmstart == 6:
-                gmstart = 2
-
-            elif gmstart == 7:
-                gmstart = 3
-
-            elif gmstart == 8:
-                gmstart = 4
-
-            elif gmstart == 9:
-                gmstart = 5
-
-            elif gmstart == 10:
-                gmstart = 6
-
-            elif gmstart == 11:
-                gmstart = 7
-
-            elif gmstart == 12:
-                gmstart = 8
-
-            elif gmstart == 13:
-                gmstart = 9
-
-
-            if gmstart2 == 1:
-                gmstart2 = 10
-
-            elif gmstart2 == 2:
-                gmstart2 = 10
-
-            elif gmstart2 == 3:
-                gmstart2 = 10
-
-            elif gmstart2 == 4:
-                gmstart2 = 10
-
-            elif gmstart2 == 5:
-                gmstart2 = 11
-
-            elif gmstart2 == 6:
-                gmstart2 = 2
-
-            elif gmstart2 == 7:
-                gmstart2 = 3
-
-            elif gmstart2 == 8:
-                gmstart2 = 4
-
-            elif gmstart2 == 9:
-                gmstart2 = 5
-
-            elif gmstart2 == 10:
-                gmstart2 = 6
-
-            elif gmstart2 == 11:
-                gmstart2 = 7
-
-            elif gmstart2 == 12:
-                gmstart2 = 8
-
-            elif gmstart2 == 13:
-                gmstart2 = 9
-            Fstarting_points = gmstart2 + gmstart
-            if Fstarting_points > 21:
-                Fstarting_points = 21
-            print ("din fiende har", (Fstarting_points))
+            
+        
+            
             
                 
 
-            
-
-        
-
-        poängdam = 10 # 10 points (de fins 4)
-        poängkung = 10 # 10 points (de fins 4)
-        poängknektar = 10 # 10 points (de fins 4)
-        poångA = 11 # 11 points (de fins 4)
-        poäng2 = 2 #2 points (de fins 4)
-        poäng3 = 3 #3 points (de fins 4)
-        poäng4 = 4 #4 points (de fins 4)
-        poäng5 = 5 #5 points (de fins 4)
-        poäng6 = 6 #6 points (de fins 4)
-        poäng7 = 7 #7 points (de fins 4)
-        poäng8 = 8 #8 points (de fins 4)
-        poäng9 = 9 #9 points (de fins 4)
-        poäng10 = 10 #10 points (de fins 4)
+    
 
 
 
@@ -467,6 +370,16 @@ def saloon():
             #-----------------------------------------------------
 #-----------------------------------------------------
 
+#-----------------------------------------------------
+def DEATH():
+    print("\033c", end="")
+    input("du är död du måste börja om")
+    print("\033c", end="")
+#-----------------------------------------------------
+#-----------------------------------------------------
+def vinst():
+    print("whoa danger u won!")
+#----------------------------------------------------
 global Qrysk
 Qrysk = False
 

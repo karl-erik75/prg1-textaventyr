@@ -22,6 +22,36 @@ minst två, och de ska vara olika. Slutar alla vägar likadant har spelarens val
 <!-- id: task-1790066427123-296 -->
 <!-- priority: low -->
 
+#### casiono
+<!-- id: task-1791274076788-51 -->
+<!-- priority: low -->
+<!-- workload: hard -->
+
+#### jobb
+<!-- id: task-1791274094682-106 -->
+gjör så att man kan jobba
+<!-- priority: low -->
+
+#### quest
+<!-- id: task-1791274236315-164 -->
+gjör så att man kan hjälpa folk aaaa
+<!-- priority: low -->
+<!-- workload: hard -->
+
+#### gjör så att man kan sköpa saker med pengar
+<!-- id: task-1791274613979-225 -->
+<!-- workload: hard -->
+
+#### gjör så att man kan slås/jaga
+<!-- id: task-1791274634360-289 -->
+<!-- priority: low -->
+<!-- workload: extreme -->
+
+#### 2 slut om man är duktig och en om man är en dålig person
+<!-- id: task-1791274665721-356 -->
+<!-- priority: high -->
+<!-- workload: hard -->
+
 ## In Progress
 
 #### Inga kraschar
