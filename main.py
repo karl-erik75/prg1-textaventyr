@@ -7,6 +7,15 @@ global rev
 rev = False
 global honor 
 honor = 0
+
+global mjölk
+global H_wisky
+global vin
+global wisky
+mjölk = 0
+H_wisky = 0
+vin = 0
+wisky = 0
 # (en gångs saker)
 print("\033c", end="")
 #-----------------------------------------------------
@@ -176,7 +185,20 @@ def stats():
         print("    din fika är tom")
     print("<(*)>---------------------------<(*)>")
 #-----------------------------------------------------
-
+#-----------------------------------------------------
+def DEATH():
+    print("\033c", end="")
+    input("du är död du måste börja om")
+    print("\033c", end="")
+#-----------------------------------------------------
+#-----------------------------------------------------
+def vinst():
+    input("skotet gick rakt igenom hans huvud DU VAN!!!!!")
+    global Qrysk
+    Qrysk = True
+    fråga()
+#----------------------------------------------------
+global Qrysk
 #dom olika stälerna man kan gå till
 #-----------------------------------------------------
 def saloon():
@@ -190,15 +212,23 @@ def saloon():
         
         drika = input("vilken drika vil du sköpa? (hård wisky), (wisky), (vin). (mjölk) ")
         if drika == "hård wisky":
-            print("du har en hård wisky")
+            print("vill du drika den nu?")
+            global H_wisky
+            H_wisky = H_wisky + 1
 
         elif drika == "wisky":
-            print("du dör mindre")
+            print("vill du drika den nu?")
+            global wisky
+            wisky = wisky + 1
 
         elif drika == "vin":
-            print ("de blev en björ och du DÖR")
+            print ("vill du drika den nu?")
+            global vin
+            vin = vin + 1
         elif drika == "mjölk":
-            print ("MUMS!!!")
+            print ("vill du drika den nu?")
+            global mjölk
+            mjölk = mjölk + 1
         else:
             input("du skrev något fel")
             saloon()
@@ -230,7 +260,7 @@ def saloon():
                 print("\033c", end="")
                 val3 = input("vad gjör du (skjuta eller snura) ")
                 if val3 == "skjuta":
-                    skot + 1
+                    skot = skot + 1
                     if cylinder == skot:
                         print("\033c", end="")
                         input("wasted! du dog av at skjuta dig skälv :(")
@@ -242,7 +272,7 @@ def saloon():
                             print("han valde att snura cylinder")
                             cylinder = random.randint(1,6)
                             skot = 0
-                            skot + 1
+                            skot = skot + 1
                             if skot == cylinder:
                                 spelet = False
                                 vinst()
@@ -250,7 +280,7 @@ def saloon():
                                 input("ni hörde ett click och fortsete sköra")
                         else:
                             input("han valde att skjuta sig skälv")
-                            skot + 1
+                            skot = skot + 1
                             if skot == cylinder:
                                 spelet = False
                                 vinst()
@@ -263,7 +293,7 @@ def saloon():
                     cylinder = random.randint(1,6)
                     skot = 0
                     input("du rikta pistolen mt digskälv")
-                    skot + 1
+                    skot = skot + 1
                     if skot == cylinder:
                         DEATH()
                     elif skot != cylinder:
@@ -272,7 +302,7 @@ def saloon():
                             print("han valde att snura cylinder")
                             cylinder = random.randint(1,6)
                             skot = 0
-                            skot + 1
+                            skot = skot + 1
                             if skot == cylinder:
                                 spelet = False
                                 vinst()
@@ -281,7 +311,7 @@ def saloon():
 
                         else:
                             input("han valde att skjuta sig skälv")
-                            skot + 1
+                            skot = skot + 1
                             if skot == cylinder:
                                 spelet = False
                                 vinst()
@@ -291,26 +321,13 @@ def saloon():
 
         else:
             print("du skrev något fel")
-            saloon()
-
-
-            
-        
-            
-            
-                
-
-    
-
-
-
-        
-            
+            saloon()      
 
 
     #quests/om du vil prata med folk
     #-----------------------------------------------------
     elif val == "prata" or val == "prata med folk":
+
         personer = random.randint(1,6)
        
 
@@ -339,7 +356,11 @@ def saloon():
             if Qrysk == False:
                 input("han vill att du ska döda en rysk")
             elif Qrysk == True:
-                print("ok")
+                input("han nickade och sa att han var stålt")
+                global guld
+                guld = guld + 200
+                global honor
+                honor = honor - 1
 
             saloon()
 
@@ -361,26 +382,118 @@ def saloon():
         elif personer == 6:
             input("jamen tjena brosan! mit namn är Ulf. Ulf Ulfsson amen kalla mig bara ulf då. Du du ser ut som en god medborgare skule du kuna ge mig lite fika?") # FIAKKAKAKAKAKKAKAA
             if Qfika == False:
-                input("hitta han fika!")
+                input("hitta han fika! (((TIPS!!! hjälp han SIST!!!)))")
             elif Qfika == True:
                 print("rysk")
             saloon()
-            
-
             #-----------------------------------------------------
-#-----------------------------------------------------
+    #-----------------------------------------------------
 
+    #-----------------------------------------------------
+    elif val == "annat":
+        fråga()
+    #-----------------------------------------------------
+    #-----------------------------------------------------
+    else:
+        input("du skrev något fel")
+        saloon()
+    #-----------------------------------------------------
 #-----------------------------------------------------
-def DEATH():
+def casino():
     print("\033c", end="")
-    input("du är död du måste börja om")
-    print("\033c", end="")
-#-----------------------------------------------------
-#-----------------------------------------------------
-def vinst():
-    print("whoa danger u won!")
-#----------------------------------------------------
-global Qrysk
+    if Qbrunvarg == False:
+        stats()
+        input("woof woof woof WOOF (säger den bruna vargen som äger casinot)")
+        val = input("vid vil du spela? (slots) eller (slots) eller (annat) om du vil härifrån? ""alla andra maskiner är trasiga""")
+        if val == "slots":
+            print("du valde ATT SPELA SLOTS")
+            slots = True
+            while slots == True:
+                print("\033c", end="")
+                money = int(input("how mutch money vill du läga in?"))
+                if money == guld or money < guld:
+                   
+                    global guld
+                    guld = guld - money
+                    tal1 = random.randint(1,3)
+                    tal2 = random.randint(1,3)
+                    tal3 = random.randint(1,3)
+                    if tal1 == 1:
+                        tal1 = "strawbery"
+                    elif tal1 == 2:
+                        tal1 = "cherry"
+                    elif tal1 == 3:
+                        tal1 = "seven"
+
+                    if tal2 == 1:
+                        tal2 = "strawbery"
+                    elif tal2 == 2:
+                        tal2 = "cherry"
+                    elif tal2 == 3:
+                        tal2 = "seven"
+
+                    if tal3 == 1:
+                        tal3 = "strawbery"
+                    elif tal3 == 2:
+                        tal3 = "cherry"
+                    elif tal3 == 3:
+                        tal3 = "seven"
+
+                    print ((tal1), (tal2), (tal3))
+                    if tal1 == tal2 and tal2 == tal3 and tal1 == "strawbery":
+                        money = money * 7
+                        print("you won", (money))
+                        global guld
+                        guld = guld + money
+
+
+
+                    print ((tal1), (tal2), (tal3))
+                    if tal1 == tal2 and tal2 == tal3 and tal1 == "cherry":
+                        money = money * 7
+                        print("you won", (money))
+                        global guld
+                        guld = guld + money
+
+                    print ((tal1), (tal2), (tal3))
+                    if tal1 == tal2 and tal2 == tal3 and tal1 == "seven":
+                        money = money * 7
+                        print("you won", (money))
+                        global guld
+                        guld = guld + money
+
+                    else:
+                        input("du förlorade :(")
+                        
+
+                    
+                        
+
+                    
+
+                        
+
+
+
+                else:
+                    input("du är för fatig brokie!")
+                    slots = False
+                    casino()
+
+
+
+
+        elif val == "annat":
+            fråga()
+
+        else:
+            input("du skrev något fel")
+            casino()
+            
+            
+    
+
+
 Qrysk = False
 
 global Qwisky

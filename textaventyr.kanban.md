@@ -22,21 +22,10 @@ minst två, och de ska vara olika. Slutar alla vägar likadant har spelarens val
 <!-- id: task-1790066427123-296 -->
 <!-- priority: low -->
 
-#### casiono
-<!-- id: task-1791274076788-51 -->
-<!-- priority: low -->
-<!-- workload: hard -->
-
 #### jobb
 <!-- id: task-1791274094682-106 -->
 gjör så att man kan jobba
 <!-- priority: low -->
-
-#### quest
-<!-- id: task-1791274236315-164 -->
-gjör så att man kan hjälpa folk aaaa
-<!-- priority: low -->
-<!-- workload: hard -->
 
 #### gjör så att man kan sköpa saker med pengar
 <!-- id: task-1791274613979-225 -->
@@ -58,6 +47,11 @@ gjör så att man kan hjälpa folk aaaa
 <!-- id: task-1789370399886-49 -->
 vid normala inmatningar. Om du vill så kan du använda mönstret valideraren från kurswebben
 
+#### casiono
+<!-- id: task-1791274076788-51 -->
+<!-- priority: low -->
+<!-- workload: hard -->
+
 #### världen
 <!-- id: task-1790065515868-200 -->
 gjör klart så att du kan gå runt i the world!
@@ -67,15 +61,11 @@ Tags: `ehh`
 <!-- workload: extreme -->
 <!-- source: jag -->
 
-#### saloon/bar
-<!-- id: task-1790240662232-664 -->
-gjör klart så att man kan sköpa drikor och skjuta folk!!!!
+#### quest
+<!-- id: task-1791274236315-164 -->
+gjör så att man kan hjälpa folk aaaa
 <!-- priority: low -->
-<!-- workload: extreme -->
-
-#### spela med pengar i the saloon
-<!-- id: task-1790847008416-144 -->
-<!-- priority: critical -->
+<!-- workload: hard -->
 
 ## Done
 
@@ -86,6 +76,16 @@ Klona / forka repot och börja sedan jobba med materialet
 #### f-strängar
 <!-- id: task-1789370290018-5 -->
 spelarens namn används i minst tre print()-satser
+
+#### spela med pengar i the saloon
+<!-- id: task-1790847008416-144 -->
+<!-- priority: critical -->
+
+#### saloon/bar
+<!-- id: task-1790240662232-664 -->
+gjör klart så att man kan sköpa drikor och skjuta folk!!!!
+<!-- priority: low -->
+<!-- workload: extreme -->
 
 #### "stats windo"
 <!-- id: task-1790068279498-495 -->
