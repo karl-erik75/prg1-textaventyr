@@ -6,40 +6,18 @@
 
 ## To Do
 
-#### Skriv berättelsen
-<!-- id: task-1789371029039-86 -->
-<!-- priority: critical -->
-
-#### .lower()
-<!-- id: task-1789370324820-21 -->
-all jämförelse av inmatning sänks till gemener först
-
-#### Flera slut
-<!-- id: task-1789370357795-38 -->
-minst två, och de ska vara olika. Slutar alla vägar likadant har spelarens val inte spelat någon roll
-
-#### gjör så man kan slås med folk
-<!-- id: task-1790066427123-296 -->
-<!-- priority: low -->
-
-#### jobb
-<!-- id: task-1791274094682-106 -->
-gjör så att man kan jobba
-<!-- priority: low -->
-
 #### gjör så att man kan sköpa saker med pengar
 <!-- id: task-1791274613979-225 -->
 <!-- workload: hard -->
-
-#### gjör så att man kan slås/jaga
-<!-- id: task-1791274634360-289 -->
-<!-- priority: low -->
-<!-- workload: extreme -->
 
 #### 2 slut om man är duktig och en om man är en dålig person
 <!-- id: task-1791274665721-356 -->
 <!-- priority: high -->
 <!-- workload: hard -->
+
+#### Skriv berättelsen
+<!-- id: task-1789371029039-86 -->
+<!-- priority: critical -->
 
 ## In Progress
 
@@ -47,10 +25,41 @@ gjör så att man kan jobba
 <!-- id: task-1789370399886-49 -->
 vid normala inmatningar. Om du vill så kan du använda mönstret valideraren från kurswebben
 
+## Done
+
+#### Klona repot
+<!-- id: task-1789371224632-115 -->
+Klona / forka repot och börja sedan jobba med materialet
+
+#### .lower()
+<!-- id: task-1789370324820-21 -->
+all jämförelse av inmatning sänks till gemener först
+
+#### gjör så att man kan slås/jaga
+<!-- id: task-1791274634360-289 -->
+<!-- priority: low -->
+<!-- workload: extreme -->
+
+#### gjör så man kan slås med folk
+<!-- id: task-1790066427123-296 -->
+<!-- priority: low -->
+
+#### f-strängar
+<!-- id: task-1789370290018-5 -->
+spelarens namn används i minst tre print()-satser
+
+#### Flera slut
+<!-- id: task-1789370357795-38 -->
+minst två, och de ska vara olika. Slutar alla vägar likadant har spelarens val inte spelat någon roll
+
 #### casiono
 <!-- id: task-1791274076788-51 -->
 <!-- priority: low -->
 <!-- workload: hard -->
+
+#### spela med pengar i the saloon
+<!-- id: task-1790847008416-144 -->
+<!-- priority: critical -->
 
 #### världen
 <!-- id: task-1790065515868-200 -->
@@ -61,37 +70,28 @@ Tags: `ehh`
 <!-- workload: extreme -->
 <!-- source: jag -->
 
-#### quest
-<!-- id: task-1791274236315-164 -->
-gjör så att man kan hjälpa folk aaaa
-<!-- priority: low -->
-<!-- workload: hard -->
-
-## Done
-
-#### Klona repot
-<!-- id: task-1789371224632-115 -->
-Klona / forka repot och börja sedan jobba med materialet
-
-#### f-strängar
-<!-- id: task-1789370290018-5 -->
-spelarens namn används i minst tre print()-satser
-
-#### spela med pengar i the saloon
-<!-- id: task-1790847008416-144 -->
-<!-- priority: critical -->
-
 #### saloon/bar
 <!-- id: task-1790240662232-664 -->
 gjör klart så att man kan sköpa drikor och skjuta folk!!!!
 <!-- priority: low -->
 <!-- workload: extreme -->
 
+#### quest
+<!-- id: task-1791274236315-164 -->
+gjör så att man kan hjälpa folk aaaa
+<!-- priority: low -->
+<!-- workload: hard -->
+
 #### "stats windo"
 <!-- id: task-1790068279498-495 -->
 gjör så man kan kola vad man har liv, guld osv...
 <!-- priority: high -->
 <!-- workload: hard -->
+
+#### jobb
+<!-- id: task-1791274094682-106 -->
+gjör så att man kan jobba
+<!-- priority: low -->
 
 #### alla ska prata olike språk för tusan!
 <!-- id: task-1790673934586-755 -->

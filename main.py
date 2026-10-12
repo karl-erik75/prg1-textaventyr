@@ -7,7 +7,8 @@ global rev
 rev = False
 global honor 
 honor = 0
-
+global loops
+loops = True
 global mjölk
 global H_wisky
 global vin
@@ -106,24 +107,30 @@ def början():
 #-----------------------------------------------------
 def värld():
     print("\033c", end="")
+    global loops 
 
+    if Qwisky2 == True and Qvapen == True and Qfika == True and Qrysk == True and Qbrunvarg == True and Qwisky and loops == True:
+        print("DU KLARADE AV SPELET!!! genom att hjälpa alla personerna i the saloon")
+        
+        loops = False
+        fråga()
 
-
-    za_worldo = input("vart vill du gå? (casino), (saloon), (general store), (jobb), något annat ")
-    if za_worldo == "saloon":
-        saloon()
-
-    elif za_worldo == "casino":
-        casino()
-
-    elif za_worldo == "general store":
-        print(wip)
-
-    elif za_worldo == "jobb":
-        print(wip)
     else:
-        input("du skrev något fell")
-        värld()
+        za_worldo = input("vart vill du gå? (casino), (saloon), (general store), (jobb),")
+        if za_worldo == "saloon":
+            saloon()
+
+        elif za_worldo == "casino":
+            casino()
+
+        elif za_worldo == "general store":
+            print(wip)
+
+        elif za_worldo == "jobb":
+            jobb()
+        else:
+            input("du skrev något fell")
+            värld()
 #-----------------------------------------------------
 #-----------------------------------------------------
 def inventory():
@@ -216,20 +223,30 @@ def saloon():
             print("vill du drika den nu?")
             global H_wisky
             H_wisky = H_wisky + 1
+            print("du har inget vall du för inte drika något!")
+            global Qwisky
+            Qwisky = True
 
         elif drika == "wisky":
             print("vill du drika den nu?")
             global wisky
             wisky = wisky + 1
+            print("du har inget vall du för inte drika något!")
+            global wisky2
+            wisky2 = True
 
         elif drika == "vin":
             print ("vill du drika den nu?")
             global vin
             vin = vin + 1
+            print("du har inget vall du för inte drika något!")
+
         elif drika == "mjölk":
             print ("vill du drika den nu?")
             global mjölk
             mjölk = mjölk + 1
+            print("du har inget vall du för inte drika något!")
+
         else:
             input("du skrev något fel")
             saloon()
@@ -345,6 +362,7 @@ def saloon():
                 input("han vil ha en stor pistol")
             elif Qvapen == True:
                 input("du klarade det!")
+                fråga()
             saloon()
 
         
@@ -353,8 +371,9 @@ def saloon():
             if Qwisky == False:
                 input("han vill at du ska skåpa hårdare wisky en vad dom har här")
 
-            elif Qvapen == True:
+            elif Qwisky == True:
                 print("ajj")
+                fråga()
             saloon()
 
         elif personer == 3:
@@ -367,6 +386,7 @@ def saloon():
                 guld = guld + 200
                 global honor
                 honor = honor - 1
+                fråga()
 
             saloon()
 
@@ -376,6 +396,8 @@ def saloon():
                 input("han vill at du sak döda en brun varg")
             elif Qbrunvarg == True:
                 print("ok!!!")
+                fråga()
+                
             saloon()
 
         elif personer == 1:
@@ -384,13 +406,15 @@ def saloon():
                 input("sköp en normal wisky åt han")
             if Qwisky2 == True:
                 print("ajkjjjdzopjneijpf")
+                fråga()
 
         elif personer == 6:
             input("jamen tjena brosan! mit namn är Ulf. Ulf Ulfsson amen kalla mig bara ulf då. Du du ser ut som en god medborgare skule du kuna ge mig lite fika?") # FIAKKAKAKAKAKKAKAA
             if Qfika == False:
-                input("hitta han fika! (((TIPS!!! hjälp han SIST!!!)))")
+                input("hitta han fika")
             elif Qfika == True:
-                print("rysk")
+                print("thanke you")
+                fråga()
             saloon()
             #-----------------------------------------------------
     #-----------------------------------------------------
@@ -405,7 +429,9 @@ def saloon():
         saloon()
     #-----------------------------------------------------
 #-----------------------------------------------------
+#-----------------------------------------------------
 def casino():
+    global Qbrunvarg
     if Qbrunvarg == False:
         global guld
         print("\033c", end="")
@@ -487,7 +513,7 @@ def casino():
 
                                 else:
                                     input("du gjorde inget. vargen blev så paranoid av att du inte gjorde något. han blev så paranoid så att han dog")
-                                    global Qbrunvarg
+                                    
                                     Qbrunvarg == True
                                     fråga()
 
@@ -512,7 +538,41 @@ def casino():
     else:
         input("casinot var tomt")
         fråga()
-            
+#-----------------------------------------------------
+#-----------------------------------------------------
+def jobb():
+    print("\033c", end="")
+    X = int(input("hur många timmar vill du jobba?"))
+    if X == str:
+            print("du skrev något fell")
+            fråga()
+    else:
+
+        global guld
+        money = 160 * X
+        print("du jobbade", (X), "timmar och fick", (money), "pengar")
+        print("och du fick lite fika")
+        global Qfika
+        Qfika = True
+        fråga()
+
+        if X == str:
+            print("du skrev något fell")
+            fråga()
+#-----------------------------------------------------
+#-----------------------------------------------------
+def store():
+    print("\033c", end="")
+    Q = input("du kan skriva (pistol) om du vil sköpa pistol?!?!?")
+
+
+    if Q == "pistol":
+        print("whoa  you go danger (du fik den gratis!)")
+        global Qvapen2
+    else:
+        print("du skrev något fel!")
+        store()
+
             
     
 
