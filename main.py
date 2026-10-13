@@ -107,30 +107,24 @@ def början():
 #-----------------------------------------------------
 def värld():
     print("\033c", end="")
-    global loops 
+    
 
-    if Qwisky2 == True and Qvapen == True and Qfika == True and Qrysk == True and Qbrunvarg == True and Qwisky and loops == True:
-        print("DU KLARADE AV SPELET!!! genom att hjälpa alla personerna i the saloon")
-        
-        loops = False
-        fråga()
+    
+    za_worldo = input("vart vill du gå? (casino), (saloon), (general store), (jobb),")
+    if za_worldo == "saloon":
+        saloon()
 
+    elif za_worldo == "casino":
+        casino()
+
+    elif za_worldo == "general store":
+        print(wip)
+
+    elif za_worldo == "jobb":
+        jobb()
     else:
-        za_worldo = input("vart vill du gå? (casino), (saloon), (general store), (jobb),")
-        if za_worldo == "saloon":
-            saloon()
-
-        elif za_worldo == "casino":
-            casino()
-
-        elif za_worldo == "general store":
-            print(wip)
-
-        elif za_worldo == "jobb":
-            jobb()
-        else:
-            input("du skrev något fell")
-            värld()
+        input("du skrev något fell")
+        värld()
 #-----------------------------------------------------
 #-----------------------------------------------------
 def inventory():
@@ -146,13 +140,22 @@ def fråga():
     print ("vad vill du gjöra nu?")
     information = input("Skriv hjälp om du är fast. ")
     if information == "hjälp":
-        information2 = input("Skriv (värld) för att gå till et annat stäle. "
-        "(rygsäck) för att se vad du har. ")
+        information2 = input("Skriv (värld) för att gå till et annat stäle skriv (slut) om du vill få ett slut på spelet")
         if information2 ==  "värld":
             värld()
         
-        elif information2 ==  "rygsäck":
-            inventory()
+        elif information2 ==  "slut":
+            print("\033c", end="")
+            if Qwisky2 == True and Qvapen == True and Qfika == True and Qrysk == True and Qbrunvarg == True and Qwisky:
+                    print("DU KLARADE AV SPELET!!! genom att hjälpa alla personerna i the saloon. och alla levde lyckliga i alla sina dagar!")
+                    
+    
+                    fråga() 
+            else:
+                print("du hjälpte inte alla som var i the saloon du får ett annat slut om du gjör det :rage ")
+
+
+        
         else:
             input("du skrev något fel")
             fråga()
